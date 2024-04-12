@@ -91,3 +91,11 @@ This is the place for you to write reflections:
 >  Di Rust itu defaultnya static variable itu immutable, yang membuat Rust terkenal dengan safety dan reliabilitynya secara concurrent dibandingkan dengan Java karena static variabel tersebut tidak dapat diubah setelah inisialisasinya. Hal ini menjaga agar tidak terjadi data race.
 
 #### Reflection Subscriber-2
+1. Have you explored things outside of the steps in the tutorial, for example: src/lib.rs? If not, explain why you did not do so. If yes, explain things that you have learned from those other parts of code.
+> Saya telah melihat bagian kode src/lib.rs. Di dalam src/lib.rs, terdapat konfigurasi dan dependensi aplikasi. Selain itu ada inisialisasi REQWEST_CLIENT dan APP_CONFIG juga yang dari tadi dipakai dalam mengimplementasi kode. Jadi secara keseluruhan, src/lib.rs berfungsi untuk mendefinisikan komponen-komponen yang diperlukan dalam aplikasi.
+
+2. Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+> Observer Pattern memudahkan kita dalam menambahkan subscriber tambahan ke sistem notifikasi, jadi code architecturenya bakal lebih flexible dan scalable. Hal ini karena di dalam Observer pattern bakal dipisah antara publisher dan observernya. Spawning lebih darii 1 instance Main app akan mudah dilakukan karena terdapat parallel processing untuk notificationnya, sehingga membuat kode lebih efisien.
+
+3. Have you tried to make your own Tests, or enhance documentation on your Postman collection? If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+> Menurut saya mungkin fitur ini akan berguna dalam mengerjakan TK adpro nanti karena dapat lebih mudah dalam mengetest API endpoint dan responnya secara automate.
